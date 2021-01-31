@@ -1,0 +1,375 @@
+@charset "UTF-8";
+
+.body, .page {
+  background-color: rgb(159, 210, 221);
+  color: rgb(88, 88, 88);
+  font-family: 'Alegreya Sans', sans-serif;
+  width: 100%;
+  font-size: 20px;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.content {
+  background-color: rgb(159, 210, 221);
+  transition: box-shadow 0.5s;
+  box-shadow:
+  10px 10px 30px rgba(18, 49, 61, 0.5),
+  -10px -10px 30px rgba(248, 253, 255, 0.9),
+  inset 10px 10px 30px transparent,
+  inset -10px -10px 30px transparent;
+}
+.content:hover, .page .content-box {
+  box-shadow:
+  10px 10px 30px transparent,
+  -10px -10px 30px transparent,
+  inset 10px 10px 30px rgba(18, 49, 61, 0.5),
+  inset -10px -10px 30px rgba(248, 253, 255, 0.9);
+  border-radius: 50px;
+}
+a {
+  display: inline-block;
+}
+a:hover {
+  color: rgba(240, 240, 240, 0.867);
+  transform: 0.3s;
+}
+
+
+/* ヘッダー */
+.header {
+  padding: 10px 2%;
+  box-sizing: border-box;
+}
+.logo img {
+  width: 45%;
+}
+.header-nav li {
+  /* margin: 0 35px; */
+  margin: 10px;
+  border-radius: 30px;
+  font-size: 15px;
+}
+.header-nav a {
+  padding: 5px 40px;
+}
+.header .flex {
+  position: relative;
+}
+
+/* ハンバーガー */
+#hamburger {
+  display: none;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+#hamburger:hover span:nth-child(2) {
+  left: 15px;
+}
+
+#hamburger span {
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: #333;
+  position: absolute;
+  left: 10px;
+  transition: 0.3s;
+}
+
+#hamburger span:nth-child(1) {
+  top: 10px;
+}
+
+#hamburger span:nth-child(2) {
+  top: 20px;
+}
+
+#hamburger span:nth-child(3) {
+  top: 30px;
+}
+
+#hamburger.active span:nth-child(1) {
+  top: 20px;
+  transform: rotate(45deg);
+}
+
+#hamburger.active span:nth-child(2) {
+  left: 30px;
+  opacity: 0;
+}
+
+#hamburger.active span:nth-child(3) {
+  top: 20px;
+  transform: rotate(-45deg);
+}
+.body.hidden, .page.hidden {
+  overflow: hidden;
+}
+
+/* main */
+.main {
+  padding-top: 15px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+.main-box {
+  width: 48%;
+  border-radius: 50px;
+  font-size: 3rem;
+  letter-spacing: 1.3px;
+  font-weight: bold;
+}
+.main-box a {
+  padding: 75px 160px;
+}
+.main li:nth-child(-n + 2) {
+  margin-bottom: 50px;
+}
+.footer {
+  text-align: center;
+  font-size: 0.95rem;
+  padding-top: 20px;
+}
+
+/* page 共通 */
+.page .title {
+  font-size: 2.5rem;
+  padding: 20px 0;
+  letter-spacing: 1.3px;
+  text-align: center;
+}
+.page .service, .page .about {
+  text-align: center;
+}
+
+
+/* page service */
+.page .service {
+  width: 95%;
+  margin: 0 auto;
+}
+.page .service-content {
+  width: 28%;
+  padding: 40px 20px;
+}
+
+.page .service-content img {
+  width: 30%;
+}
+
+.page .service-content-title {
+  margin-bottom: 30px;
+  letter-spacing: 1.3px;
+}
+
+.page .service-content-text {
+  margin-top: 30px;
+  font-size: 1.08rem;
+}
+.page .service-first, .page .service-third {
+  padding: 53px 20px;
+}
+
+
+/* about */
+.page .about {
+  width: 85%;
+  margin: 0 auto;
+  padding: 15px 50px 15px 0;
+  box-sizing: border-box;
+}
+.page .about.flex {
+  justify-content: space-around;
+}
+.page .about-text {
+  line-height: 2;
+  font-size: 1.15rem;
+}
+
+.page .about-text span {
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+/* portfolio */
+.page .portfolio {
+  text-align: center;
+  width: 98%;
+  margin: 0 auto;
+}
+.page .portfolio-main, .page .portfolio-cor {
+  width: 48%;
+  padding: 30px 50px;
+  box-sizing: border-box;
+}
+.page .portfolio img {
+  margin: 50px 0;
+  width: 60%;
+}
+
+
+/* contact */
+.page .contact-form, .page .check, .page .complete {
+  width: 50%;
+  margin: 20px auto 60px;
+  font-size: 20px;
+  border-collapse: collapse;
+}
+.page .complete {
+  text-align: center;
+}
+
+.page .check-box {
+  margin-top: 50px;
+}
+
+
+.page .contact-form th,
+.page .contact-form td{
+  border: 1px solid #0003;
+  padding:8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.page .submit-btn, .page .check-btn {
+  width: 200px;
+  height: 50px;
+  display: block;
+  margin: 0  auto 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  color: rgb(88, 88, 88);
+}
+
+
+
+@media screen and (max-width: 896px) {
+  .header-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 998;
+    background: rgb(194, 222, 228);
+    display: none;
+  }
+  .header-nav ul.flex {
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .header-nav li {
+    margin: 40px 0;
+  }
+  .header-nav a {
+    padding: 0 110px;
+  }
+  #hamburger {
+    display: block;
+  }
+  .main-box {
+    width: 100%;
+  }
+  .main-box a {
+    padding: 60px 100px;
+  }
+  .main li:nth-child(3) {
+    margin-bottom: 50px;
+  }  
+  .page .service .flex {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .page .service-content {
+    width: 100%
+  }
+  .page .service-first, .page .service-second {
+    margin-bottom: 40px;
+  }
+  .page .about {
+    margin: 40px auto 90px;
+    padding: 30px 50px;
+  }
+  .page .about .about-img {
+    width: 40%;
+    padding-right: 50px;
+  }
+  .page .contact-form {
+    width: 70%;
+    margin: 50px auto 100px;
+    border-collapse: collapse;
+  }
+  .page .submit-btn, .page .check-btn {
+    margin: 0  auto 260px;
+  }
+  .page .portfolio .flex {
+    display: block;
+  }
+  .page .portfolio-main, .page .portfolio-cor {
+    width: 98%;
+    padding: 30px 40px;
+  }
+  .page .portfolio-main {
+    margin-bottom: 30px;
+  }
+  .page .portfolio img {
+    margin: 30px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header-nav a {
+    padding: 0 80px;
+  }
+  .main-box a {
+    padding: 20px 60px;
+  }
+  .main li:nth-child(-n + 3) {
+    margin-bottom: 30px;
+  } 
+  .main-box {
+    border-radius: 30px;
+  }
+  .page .about {
+    margin: 0 auto;
+    padding: 30px 50px;
+  }
+  .page .about .about-img {
+    width: 80%;
+    padding-right: 40px;
+  }
+  .page .about .about-text {
+    font-size: 0.65rem;
+  }
+  .page .contact-form {
+    width: 98%;
+    margin: 30px auto 60px;
+    font-size: 8px;
+    border-collapse: collapse;
+  }
+  .page .submit-btn, .page .check-btn {
+    margin: 0  auto 60px;
+  }
+  .page .portfolio img {
+    width: 80%;
+  }
+}
